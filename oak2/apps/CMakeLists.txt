@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 2.8.12)
+
+add_subdirectory(local_classification/trainer)
+add_subdirectory(local_classification/tester)
+add_subdirectory(local_regression/trainer)
+add_subdirectory(local_regression/tester)
+add_subdirectory(global_classification/trainer)
+add_subdirectory(global_classification/tester)
+add_subdirectory(global_regression/trainer)
+add_subdirectory(global_regression/tester)
