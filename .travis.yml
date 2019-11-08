@@ -9,7 +9,7 @@ install:
 
 script:
   - ./build.sh
-  - ./build/oak2/apps/local_classification/trainer/oak2_local_class_trainer --help
+  - ./build/oak/apps/local_classification/trainer/oak2_local_class_trainer --help
 
 #after_success:
 #  - ./build/oak2/apps/local_classification/trainer/oak2_local_class_trainer --help
