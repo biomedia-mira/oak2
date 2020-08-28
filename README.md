@@ -69,6 +69,51 @@ $ make -j4
 
 The command line tools are located in `build/oak/apps`.
 
+## Build with Docker
+
+
+To build the docker image run
+
+```bash
+docker build -t oak2:latest .
+```
+
+
+Then run it with docker by mounting your local volume `<volume>` and calling an executable `<exec>` with its associated input arguments:
+
+
+```bash
+docker run -it --rm -v <volume>:/workdir oak2:latest <exec> --help
+```
+
+`<exec>` can be one of the following:
+
+```
+# local regression
+oak2_local_reg_trainer
+oak2_local_reg_tester
+
+# local classification
+oak2_local_class_trainer
+oak2_local_class_tester
+
+# global regression
+oak2_global_reg_trainer
+oak2_global_reg_tester
+
+# global classification
+oak2_global_class_tester
+oak2_global_class_trainer
+
+```
+
+For example, to call `oak2_global_class_trainer` with the local volume mount `/media/SSD/data`, run
+
+```bash
+docker run -it --rm -v /media/SSD/data:/workdir oak2:latest oak2_global_class_trainer --help
+```
+
+
 ## Usage
 
 Detailed instructions and examples are coming soon...
